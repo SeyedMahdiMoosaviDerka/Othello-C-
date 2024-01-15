@@ -39,22 +39,36 @@ int main ()
 			{
 				if (faza [i][j] == 28 || faza [i][j] == 37 )
 				{
-					cout << " \U0001F534 ";
+					cout <<  " " <<  " \U0001F534 " << " " ;
 				}
 
 				else if(faza [i][j] == 29 || faza [i][j] == 36)
 				{
-					cout << " \U0001F535 ";
+					cout <<  " " << " \U0001F535 "  << " " ;
 				}
 
+				else if (faza [i][j] % 8 == 0)
+				{
+					cout << " " << " " << faza [i][j] << " " << " " << endl;
+				}
+				
 				else{
-					cout << " " << faza [i][j] << " ";	
+					cout << " " << " " << faza [i][j] << " " << " ";	
 				}
 				
 			}
+
 			else if (faza [i][j]<10)
-			{
-				cout << " 0" << faza [i][j] << " ";
+			{	
+
+				if (faza [i][j] == 8)
+				{
+					cout << " " << " 0" << faza [i][j] << " " << " " << endl;
+				}
+				else{
+					cout << " " <<  " 0" << faza [i][j] << " " <<  " ";
+				}
+				
 			}
 		}
 
