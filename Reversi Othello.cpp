@@ -1,9 +1,25 @@
 #include<iostream>
 using namespace std;
+
+
+
+/* void FindCodePlace(int long array[][]){
+		for(int i = 0; i<8; i++)
+		{
+			for(int j = 0; j<8; j++)
+			{				
+				array[i][j] = 1 ;
+			}
+		}
+}
+ */
 int main ()
 {
 	int sum = 0;
-	int long long faza [8][8];
+	int long faza [8][8];
+
+
+	/* fill faza with codes: */
 	for(int i = 0; i<8; i++)
 	{
 		for(int j = 0; j<8; j++)
@@ -12,19 +28,38 @@ int main ()
 			faza [i][j]= sum;
 		}
 	}
+
+	
+	
 	for(int i = 0; i<8; i++)
 	{
 		for(int j = 0; j<8; j++)
 		{
 			if(faza [i][j]>= 10)
 			{
-				cout << " " << faza [i][j] << " ";
+				if (faza [i][j] == 28 || faza [i][j] == 37 )
+				{
+					cout << " \U0001F534 ";
+				}
+
+				else if(faza [i][j] == 29 || faza [i][j] == 36)
+				{
+					cout << " \U0001F535 ";
+				}
+
+				else{
+					cout << " " << faza [i][j] << " ";	
+				}
+				
 			}
 			else if (faza [i][j]<10)
 			{
 				cout << " 0" << faza [i][j] << " ";
 			}
 		}
+
 		cout << endl;
+
+		 /* \U0001F534 */
 	}
 }
